@@ -12,7 +12,9 @@ app.use(cors());
 
 app.use(express.json());
 
-const PORT = process.env.PORT || 5000;
+app.use('/api/products', router);
+
+const PORT = process.env.PORT || 3232;
 
 const connectDB = async () => {
   try {
